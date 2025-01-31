@@ -1,0 +1,137 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    width: 100%;   /* to make the header full width */
+    max-width: 800vw;   /* to make the header responsive */
+    text-align: center;   /* to align the text at the center */
+}
+header h1{
+    color: #767676;   /* to give color to the text */
+}
+header form .search-container{
+    margin-top: 20px;   /* to give margin from top */
+    position: relative;   /* to make the position relative */
+}
+
+header form .search-container .material-icons{
+    position: absolute; 
+    right: 150px;
+    top: 10px;
+    color: #767676;   /* to give color to the icon */
+    cursor: pointer;   /* to make the cursor pointer */
+}
+.images-container{
+    margin-block: 50px;  /* to give margin from top or bottom */
+    display: flex;   /* to make the images flex */
+    justify-content: center;   /* to align the images at the center */
+    align-items: center;   /* to align the images at the center */
+    flex-wrap: wrap;   /* to wrap the images */
+    gap: 20px;   /* to give gap between the images */
+}
+.images-container img{
+    width: 250px;   /* to give width to the images */
+    height: 220px;   /* to give height to the images */
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.1);   /* to give shadow to the images */
+    
+}
+.images-container .imageDiv{
+    position: relative;   /* to make the position relative */
+}
+.imageDiv .overlay{
+    position: absolute;   /* to make the position absolute */
+    left: 0;   /* to align the overlay at the left */
+    bottom: 0;   /* to align the overlay at the bottom */
+    width: 100%;   /* to make the overlay full width */
+    height: 0;   /* to make the height 0 */
+    background-color: rgba(0, 0, 0, 0.7);   /* to give background color to the overlay */
+    transition: height 0.8s ease-in-out;   /* to give transition to the height */
+    display: flex;   /* to make the overlay flex */
+    justify-content: center;   /* to align the text at the center */
+    align-items: center;   /* to align the text at the center */
+    border-radius: 10px;
+}
+.imageDiv:hover .overlay{
+    height: 100%;   /* to make the height 100% */
+}
+.imageDiv .overlay h3{
+    color: white;   /* to give color to the text */
+    display: none;   /* to hide the text */
+    font-size: 20px;   /* to give font size to the text */
+    text-align: center;   /* to align the text at the center */
+    padding: 20px;   /* to give padding to the text */
+}
+.imageDiv:hover .overlay h3{
+    display: block;   /* to display the text */
+}
+
+header form .search-container input{
+    width: 80%;   /* to make the input full width */
+    font-size: 18px;   /* to give font size to the text */
+    padding:12px 24px;  /* to give padding to the text first horizontal and second is vertical */
+    border: none;   /* to remove the border */
+    background: #f9f1f1;    /* to give background color */
+    border-radius: 20px;   /* to give border radius */
+    
+}
+
+/* Adding media query for responsiveness */
+.loadmoreBtn {
+    display: none; /* Hidden by default */
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.loadmoreBtn:hover {
+    background-color: #0056b3;
+    border: 2px solid #2e3032;
+}
+
+@media screen and (max-width: 920px){
+   header{
+    width: 80%;   /* to make the header 80% width */
+   }
+ }
+
+
+
+ body {
+   
+    width: 100%;  /*cover full width of the page*/
+    height: 100vh;  /*cover full height of the page*/
+    margin-block: 40px; /* margin at the top and bottom */
+    display: flex;   /* display the body as flex */
+    flex-direction: column;     /* to align the footer at the bottom */
+    align-items: center;    /* align center */
+    animation: changeBackground 15s infinite; /* Animation duration and repeat */
+
+    /* Starting background image */
+    background-image: url("C:/Users/admin/Downloads/photo-1550030272-2695f03d3088.jpg"); 
+    background-size: cover;
+}
+
+/* Keyframes to change background images */
+@keyframes changeBackground {
+    0% {
+        background-image: url("C:/Users/admin/Downloads/photo-1550030272-2695f03d3088.jpg"); 
+    }
+    33% {
+        background-image: url("C:/Users/admin/Downloads/photo-1612698093158-e07ac200d44e.jpg");
+    }
+    66% {
+        background-image: url("C:/Users/admin/Downloads/photo-1485871981521-5b1fd3805eee.jpg");
+    }
+    100% {
+        background-image: url("C:/Users/admin/Downloads/photo-1562595410-2cb999af24b5.jpg"); /* Loop back */
+    }
+}
